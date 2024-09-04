@@ -13,3 +13,5 @@ def get_total_balance(
 ):
     total_balance = db.query(Account).with_entities(func.sum(Account.balance)).scalar()
     return {"total_balance": total_balance}
+
+
