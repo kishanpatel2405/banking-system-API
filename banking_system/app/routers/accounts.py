@@ -7,7 +7,7 @@ from app.schemas import AccountCreate, UpdateAccount, AccountResponse
 router = APIRouter()
 
 
-@router.post("/account", response_model=AccountResponse)
+@router.post("", response_model=AccountResponse)
 def create_account(
         account: AccountCreate,
         db: Session = Depends(get_db),
