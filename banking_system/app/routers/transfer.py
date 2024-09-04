@@ -11,7 +11,7 @@ router = APIRouter()
 logger = logging.getLogger(__name__)
 
 
-@router.post("/transfer")
+@router.post("")
 def transfer(
         from_account_id: int,
         to_account_id: int,
