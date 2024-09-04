@@ -1,8 +1,13 @@
 from fastapi import FastAPI
 from fastapi.openapi.utils import get_openapi
 from fastapi.security import HTTPBearer
-
-from app.routers import accounts_router, transactions_router, transfer_router, balance_router
+from app.routers import (
+    accounts_router,
+    transactions_router,
+    transfer_router,
+    balance_router,
+    interest_router,
+)
 
 app = FastAPI()
 
@@ -10,6 +15,8 @@ app.include_router(accounts_router, prefix="/accounts", tags=["accounts"])
 app.include_router(transactions_router, prefix="/transactions", tags=["transactions"])
 app.include_router(transfer_router, prefix="/transfer", tags=["transfer"])
 app.include_router(balance_router, prefix="/balance", tags=["balance"])
+app.include_router(interest_router, prefix="/accounts", tags=["accounts"])
+
 
 security = HTTPBearer()
 
