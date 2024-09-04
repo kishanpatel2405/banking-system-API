@@ -21,3 +21,4 @@ class UpdateAccount(BaseModel):
 class AccountResponse(AccountBase):
     id: int
     fee: float
+
