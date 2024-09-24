@@ -15,3 +15,5 @@ def create_jwt_token(data: dict) -> str:
 data = {"user_id": 123, "username": "bank_users"}
 token = create_jwt_token(data)
 print(token)
+
+
